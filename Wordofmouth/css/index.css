@@ -1,0 +1,104 @@
+*{margin:0;padding:0;}
+a{text-decoration:none;}
+li{list-style-type:none;}
+
+
+.header{width:100%;height:28px;background: #1d1b28;min-width:1280px}
+.header ul{width:1200px;height:28px;line-height:28px;color:#fff;font-size: 12px;margin:auto;}
+.header ul li{float:right;}
+.header ul li a{color:#fff;}
+.header ul li span{margin:10px;}
+.header ul .lCur{position: relative;color:#000;z-index:2;}
+.header ul li div{width:150px;height: 175px; background: url("../image/16.png") no-repeat;background-size: 150px 175px; position: absolute;top:22px;right:-42px;display: none; text-align: center}
+.header ul li div img{line-height: 100px;margin-top: 15px}
+.header ul li a:hover+div{display: block;}
+.header ul .lCur span{line-height: 20px;text-align: center;display: inline-block}
+
+
+.nav{width:1200px;height:40px;line-height:80px;margin: auto;padding: 20px 0px;}
+.nav .logo{width:100px; height:40px;background: url("../image/1.png") no-repeat;background-size: 100px 40px;line-height:40px;display: inline-block;}
+.nav .menu{width:500px;height:40px; float:right;line-height: 40px}
+.nav .menu a{margin-left:40px;color:#000;}
+.nav .menu a:hover{color:#19acf7;}
+.main{width:100%;height:480px;background: url("../image/2.jpg") no-repeat center  /* #F00*/;background-size:auto 480px;position: relative;min-width: 1280px;z-index: -1;}
+.main_next{width:900px;height:110px;box-sizing:border-box;border:1px solid #efefef;margin:0 auto;margin-top:-55px;background: #fff;border-radius:5px;display:flex;}
+.main_next div{width:275px;height:80px;float:left;text-align:center;font-size:20px;padding-top: 30px;margin-right:20px;}
+.main_next div span{width:270px;text-align: center;display: block;}
+.main_next>span{float: left;line-height: 110px;}
+.main_next div span a:first-child{font-size:12px;color:#e64322;} 
+.main_next div a{font-size:12px;color:#333333;padding-right:2px;display: inline-block;width:30px;height:20px;}
+.main_next div span a:hover{font-size:14px;}
+.Title{width:1200px; height:80px;margin: 0 auto;line-height: 100px;border-radius:4px 4px 0 0; margin-top:90px;text-align: center;font-size:40px;font-weight:bold;}
+.content{width:1200px;height:345px;margin:20px auto;text-align: center;line-height: 20px;color:#666;display:flex;}
+.content div{width:275px;height:345px;float:left;margin-right:15px;background:#f7f7f7; transition: 0.5s ease-out;}
+.content div:last-child{margin-right:0px;}
+.content div p{width:275px;height:180px;margin: auto;overflow: hidden;transform: scale(1,1);}
+.content  div span{line-height: 80px;text-align: center;font-size:20px;color: #000;}
+.content div p img{width:275px;transition: 0.5s ;border-radius:4px 4px 0 0;overflow: hidden; }
+.content div:hover{background: #fff;box-shadow: 0 10px 5px #f0f0f0;transform:translateY(-10px);cursor:pointer;border-radius:4px 0px 0 0;}
+.content div:hover img{border-radius:4px 0px 0 0;transform: scale(1.1,1.1);overflow: hidden;} 
+/* .content .contentDiv div img{width:290px;height:180px;border-radius:4px 4px 0 0;overflow: hidden;transition: 0.5 ease-out;}
+.content .contentDiv p{width:290px;height:100px;line-height: 50px;text-align: center;font-size:20px;color:#000;margin-top:50px;}
+.content .contentDiv p span{line-height: 20px;display: block;color:#666;font-size:12px;}
+.content .contentDiv:hover{ background: #fff;box-shadow: 0 10px 5px #f0f0f0;border-radius:4px 0px 0 0;}
+*/
+
+
+.content2{width:1200px;height:275px;margin: auto;text-align: center; padding-top:50px;padding-bottom:50px; color:#666;font-size:14px;line-height: 22px;}
+
+.content2 div{width:275px;height:275px;float:left;margin-right:15px;}
+.content2 div:last-child{margin-right:0px;}
+.content2 div p{width:275px;height:150px;line-height: 150px;color:#999;font-size: 80px;}
+.content2 div span{color:#333;font-size:20px;line-height: 80px;}
+
+.banner{width:100%;height:458px;background: url("../image/15.png") repeat-y center;}
+.banner div{width:1200px;height:458px;margin: auto;overflow: hidden;position: relative;}
+.banner div img{height:390px;float:left;margin-top:90px;}
+.banner div p{position:absolute;top:100px;left:400px;color:#fff;line-height: 30px;font-size:12px;}
+.banner div p span{font-size: 40px;line-height: 80px;}
+.banner div div{width:120px;height:154px;position: absolute;bottom:86px;right:230px;background: url("../image/17.png") no-repeat;background-size: 120px 120px;}
+.banner div>span{width:120px;height:30px;position: absolute;bottom:80px;right:230px;color:#fff;}
+.content3Top{width:1200px;height:380px;margin: auto;margin-top: 80px;text-align: center;}
+.content3Top>p{text-align: center;font-size:36px;}
+.content3Top div{float:left;width:350px;height:275px;margin-right: 75px;}
+.content3Top .Cur{margin: 0px;}
+.content3Top div i{display:block;width:275px;height:150px;line-height: 150px;color:#999;font-size: 80px;margin: auto;}
+.content3Top div span{color:#333;font-size:20px;line-height: 35px;}
+.content3Top div ul{width:275px;height:80px;margin: auto;}
+.content3Top div li{color:#333;font-size:12px;line-height: 20px;list-style-type: disc;text-align: left;margin-left:40px;}
+.content3Bottom{width:100%;height:480px;background: #f5f5f5;max-width: 1920px;margin: auto;position: relative;}
+.content3Bottom .content3BottomSun{width:1040px;height:320px;margin: auto;padding: 80px;
+    position: relative;}
+.content3Bottom .content3BottomSun div{width:285px;height:272px;margin-left: 40px;float: left;text-align: center;line-height: 150px;}
+.content3Bottom .content3BottomSun i{width:100px;height:100px;border-radius:50%;background:#333;color:#fff;line-height: 100px;display: block;margin: auto;}
+.content3Bottom .content3BottomSun span{float: left;width:30px;vertical-align: middle;font-size: 20px;text-align: center;height:150px;line-height: 150px;}
+.content3Bottom .content3BottomSun div p{margin: auto;width:100px;line-height: 60px;color:#444;font-size: 20px;}
+.content3Bottom .content3BottomSun a{width:300px;height:55px;border:1px solid #a1a1a1;margin:auto;margin-left:387px;line-height:55px;border-radius: 5px;text-align: center;font-size:18px;color:#444;float: left;}
+.content3Bottom  .content3BottomSun a:hover{color:#e08a19;border-color: #e08a19;}
+.content3Bottom .content3BottomSun>b{width:230px;line-height: 30px;position: absolute;bottom:30px;left:510px;font-style: normal;font-size: 12px;}
+
+.banner2{width:100%;height:458px;background: url("../image/8.jpg") no-repeat center;margin:auto;background-size:1920px 458px;position: relative;}
+.banner2 div{width:1200px;height:458px;margin:auto;position: relative;color:#fff;font-size:12px;}
+.banner2 div p{font-size:40px;font-weight:bold;width:300px;height:60px;line-height: 60px;position: absolute;top:90px;left:460px;}
+.banner2 div  .banner2Sun{width:960px;height:187px;position: absolute;bottom:70px;left:126px;}
+.banner2 div  .banner2Sun div{width:369px;height:147px;background: rgba(0,0,0,0.5);float: left;margin-right: 30px;
+    padding:40px;font-size:12px;line-height: 20px;}
+.banner2 div  .banner2Sun div h3{text-align: center;line-height:60px;}
+.content4{width:1200px;height:914px;margin: 50px auto;}
+.content4 .content4Top{width:1200px;height:360px;padding: auto 50px;}
+.content4 .content4Top div{width:310px;height:272px;margin-left: 40px;float: left;text-align: center;}
+.content4 .content4Top div i{width:150px;height:150px;border-radius:50%;color:#000;line-height: 150px;margin: auto;display: block;}
+.content4 .content4Top div span{color:#333;font-size:20px;line-height: 80px;}
+.content4 .content4Bottom{width:1200px;height:388px;margin: auto;text-align: center;}
+.content4 .content4Bottom div{width:360px;height:390px;background:#f8f8f8;border-radius:5px;margin:50px auto;position:relative;float: left;margin-left: 20px;}
+.content4 .content4Bottom div>span{display:block;height:190px;width:360px;background:#000;border-radius:5px 5px 0 0;overflow:hidden;}
+.content4 .content4Bottom div span img{height:190px;width:360px;opacity:0.5;transition:0.3s;}
+.content4 .content4Bottom div:hover span img{opacity:1}
+.content4 .content4Bottom div p{width:200px;font-size:12px;color:#666;position: absolute;left:100px;bottom:60px;line-height: 18px;}
+.content4 .content4Bottom div p span{line-height: 50px;font-size: 20px;display: block;margin: auto;text-align: center;}
+.content4 .content4Bottom div i{position:absolute;background:#f24724;height:26px;line-height:26px;color:#fff;font-size:12px;font-style:normal;padding:0 6px;border-radius: 2px;left:-4px;top:16px;}
+.content4 .content4Bottom .LogoImg{width:86px;position:absolute;left:50%;top:50%;margin:-43px 0 0 -43px;}
+.content4 .content4Bottom a{width:300px;height:56px;
+    border:1px solid #b0b0b0;display: inline-block;border-radius: 2px;line-height: 56px;font-size: 20px;color:#000;margin-bottom: 50px;}
+ .footer{width:100%;height:100px;background: #1d1a29;text-align: center;line-height: 40px;color:#8e8c94;font-size: 11px;}
+.footer a{font-size: 12px;}
