@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layout 后台大布局 - Layui</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+</head>
+
+<body>
+    <div class="layui-layout-body">
+
+        <div class="layui-layout layui-layout-admin">
+
+            <div class="layui-header">
+                <div class="layui-logo">layui 后台布局</div>
+                <!-- 头部区域（可配合layui已有的水平导航） -->
+
+                <ul class="layui-nav layui-layout-right">
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                            贤心
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="">基本资料</a></dd>
+                            <dd><a href="">安全设置</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"><a href="">退了</a></li>
+                </ul>
+            </div>
+
+            <div class="layui-side layui-bg-black">
+                <div class="layui-side-scroll">
+                    <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                    <div class="layui-fluid">
+                        <div class="layui-row">
+                            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                                <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                                    <li class="layui-nav-item layui-nav-itemed">
+                                        <a class="" href="javascript:;">用户</a>
+                                        <dl class="layui-nav-child">
+                                            <dd>
+                                                <a href="user_list.html" target="option">用户列表</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="user_add.html" target="option">增加用户</a>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="layui-nav-item">
+                                        <a href="javascript:;">解决方案</a>
+                                        <dl class="layui-nav-child">
+                                            <dd><a href="javascript:;">列表一</a></dd>
+                                            <dd><a href="javascript:;">列表二</a></dd>
+                                            <dd><a href="">超链接</a></dd>
+                                        </dl>
+                                    </li>
+                                    <li class="layui-nav-item"><a href="">云市场</a></li>
+                                    <li class="layui-nav-item"><a href="">发布商品</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-body">
+                <!-- 内容主体区域 -->
+                <iframe id="option" name="option" src="file.html" style="overflow: visible" scrolling="no"
+                    frameborder="no" width="100%" height="100%"></iframe>
+            </div>
+
+
+            <div class="layui-footer">
+                <!-- 底部固定区域 -->
+                © layui.com - 底部固定区域
+            </div>
+
+        </div>
+    </div>
+    <script src="./layui/layui.js"></script>
+    <script>
+        //JavaScript代码区域
+        layui.use('element', function () {
+            var element = layui.element;
+            var form = layui.form;
+            //获取hash来切换选项卡，假设当前地址的hash为lay-id对应的值
+            var layid = location.hash.replace(/^#test1=/, '');
+            element.tabChange('test1', layid); //假设当前地址为：http://a.com#test1=222，那么选项卡会自动切换到“发送消息”这一项
+
+            //监听Tab切换，以改变地址hash值
+            element.on('tab(test1)', function () {
+                location.hash = 'test1=' + this.getAttribute('lay-id');
+            });
+        });
+    </script>
+    </script>
+</body>
+
+</html>
