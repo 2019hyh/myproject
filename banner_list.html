@@ -34,7 +34,7 @@
 
 <body>
     <div class="layui-card">
-        <div class="layui-card-header layui-bg-green">用户列表</div>
+        <div class="layui-card-header layui-bg-green">广告列表</div>
         <div class="layui-card-body">
             <div class="layui-row ">
                 <div class="layui-col-xs4 layui-col-sm6 layui-col-md4 ">
@@ -56,11 +56,11 @@
 
                 <div class="layui-col-xs4 layui-col-sm6 layui-col-md4 layui-col-md-offset4">
 
-                    <button type="button" class="layui-btn" id="userAdd">
-                        <i class="layui-icon">&#xe608;</i> 添加用户
+                    <button type="button" class="layui-btn" id="bannerAdd">
+                        <i class="layui-icon">&#xe608;</i> 添加广告
                     </button>
                     <button type="button" class="layui-btn layui-btn-danger">
-                        <i class="layui-icon">&#xe640;</i> 删除用户
+                        <i class="layui-icon">&#xe640;</i> 删除广告
                     </button>
                 </div>
 
@@ -73,28 +73,23 @@
 
 
 
-                    <table class="layui-table layui-form"" lay-size="sm">
+                    <table class="layui-table layui-form"" lay-size=" sm">
                         <colgroup>
-                            <col width="3%">
-                            <col width="6%">
-                            <col width="10%">
-                            <col width="10%">
-                            <col width="10%">
+                            <col width="5%">
                             <col width="5%">
                             <col width="10%">
                             <col width="10%">
                             <col width="10%">
+                            <col width="10%">
+
 
                         </colgroup>
                         <thead>
                             <tr>
                                 <th><input type="checkbox" name="" title="全选" lay-skin="primary"></th>
                                 <th>用户id</th>
-                                <th>用户昵称</th>
-                                <th>用户级别</th>
-                                <th>用户电话</th>
-                                <th>性别</th>
-                                <th>加入时间</th>
+                                <th>图片</th>
+                                <th>广告位置</th>
                                 <th>状态</th>
                                 <th>操作</th>
 
@@ -105,17 +100,19 @@
                             <tr>
                                 <td><input type="checkbox" name="" lay-skin="primary"> </td>
                                 <td>1</td>
-                                <td>admin</td>
+                                <td>
+                                    <div>
+                                        <img src="./img/banner.jpg" alt="">
+                                    </div>
+                                </td>
                                 <td>
                                     至尊会员
                                 </td>
-                                <td>110</td>
-                                <td>男</td>
-                                <td>2019/9/7 15：45</td>
+
                                 <td>
                                     <form>
                                         <div class="layui-form-item layui-form">
-                                            <input type="checkbox" name="zzz" lay-skin="switch" lay-text="启用|禁止">
+                                            <input type="checkbox" name="zzz" lay-skin="switch" lay-text="显示|禁止">
 
                                         </div>
                                     </form>
@@ -125,11 +122,12 @@
 
 
                                         <button type="button" class="layui-btn  layui-btn-xs">编辑</button>
-                                        <button type="button" class="layui-btn layui-btn-xs layui-btn-danger">删除</button>
+                                        <button type="button"
+                                            class="layui-btn layui-btn-xs layui-btn-danger">删除</button>
                                         <button type="button" class="layui-btn layui-btn-xs">升级</button>
                                     </div>
                                 </td>
-</tr>   
+                            </tr>
 
 
                         </tbody>
@@ -163,10 +161,10 @@
     </div>
     </div>
 
-    <!-- 用户添加 -->
-    <form class="layui-form" action="" id="addForm" style="display:none;">
+    <!-- 广告添加 -->
+    <form class="layui-form" action="" id="addBanner" style="display:none;">
         <div class="layui-form-item">
-            <label class="layui-form-label">用户名</label>
+            <label class="layui-form-label">标题</label>
             <div class="layui-input-inline">
                 <input type="text" name="name" required lay-verify="username" placeholder="请输入名称" id="name"
                     autocomplete="off" class="layui-input">
@@ -174,48 +172,41 @@
             </div>
 
         </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">密码</label>
-            <div class="layui-input-inline">
-                <input type="password" name="pwd" required lay-verify="pass" placeholder="请输入密码" id="fpwd"
-                    autocomplete="off" class="layui-input">
-            </div>
 
-        </div>
 
-        <div class="layui-form-item">
-            <label class="layui-form-label" for="tel">手机</label>
-            <div class="layui-input-inline">
-                <input type="tel" name="tel" required lay-verify="tel" id="tel" placeholder="请输联系方式"
-                    autocomplete="off" class="layui-input">
-            </div>
 
-        </div>
         <div class="layui-form-item">
             <label class="layui-form-label">头像</label>
-       
-            <img data-anim="layui-anim-scaleSpring" class="layui-upload layui-anim" id="id_upload_img"
-            src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564555274864&di=f0897dc4a00cccc5f71bdd0d46fe1720&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201608%2F21%2F20160821230024_MyCYK.thumb.700_0.jpeg" style="border-radius: 50%; width: 18%">
-            <div class="layui-word-aux">上传图片限制大小 60kb</div>
-          
+            <div id="id_upload_img">
+                <button type="button" class="layui-btn" id="upfile">
+                    <i class="layui-icon">&#xe67c;</i>上传图片
+                </button>
+                <img src="./img/banner.jpg" id="show" width="200" data-anim="layui-anim-scaleSpring"
+                    class="layui-upload layui-anim">
+
+            </div>
+
+
+
+
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">管理员权限</label>
+            <label class="layui-form-label">广告位置</label>
             <div class="layui-input-inline">
                 <select name="city" lay-verify="lev">
-                    <option value="0">等级1</option>
-                    <option value="0">等级2</option>
-                    <option value="0">等级3</option>
-                    <option value="0">等级4</option>
+                    <option value="0">首页顶部</option>
+                    <option value="0">首页中间</option>
+                    <option value="0">其他位置</option>
+
 
                 </select>
             </div>
         </div>
-       
+
         <div class="layui-form-item">
-            <label class="layui-form-label">状态</label>
+            <label class="layui-form-label">显示</label>
             <div class="layui-input-inline">
-                <input type="checkbox" name="zzz" lay-skin="switch" lay-text="启用|禁止">
+                <input type="checkbox" name="zzz" lay-skin="switch" lay-text="显示|不显示">
             </div>
         </div>
         <div class="layui-form-item">
@@ -226,24 +217,25 @@
             </div>
         </div>
     </form>
+
     <script src="./layui/layui.js"></script>
     <script src="./layui/lay/modules/jquery.js"></script>
     <script src="./layui/lay/modules/layer.js"></script>
 
     <script>
 
-        layui.use(['layer', 'form', 'layedit', 'upload','jquery', 'laydate'], function () {
+        layui.use(['layer', 'form', 'layedit', 'upload', 'jquery', 'laydate'], function () {
             var layer = layui.layer;
             var form = layui.form;
-            var upload = layui.upload
-            /* 增加用户 */
-            $("#userAdd").on('click', function () {
+            var upload = layui.upload;
+
+            $("#bannerAdd").on('click', function () {
                 layer.open({
                     type: 1,
-                    title: "新增用户",
-                    area: ['500px','75%'],
+                    title: "新增广告",
+                    area: ['80%', '100%'],
                     btn: ["保存", "取消"],
-                    content: $("#addForm"),
+                    content: $("#addBanner"),
                     yes: function (index, layero) {
 
                         return false;
@@ -260,73 +252,28 @@
                         return 0
                     }
                 })
-              /*  form.verify({
-                    username: function (value, item) { //value：表单的值、item：表单的DOM对象
-                        if (!new RegExp("^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$").test(value)) {
-                            return '用户名不能有特殊字符';
-                        }
-                        if (/(^\_)|(\__)|(\_+$)/.test(value)) {
-                            return '用户名首尾不能出现下划线\'_\'';
-                        }
-                        if (/^\d+\d+\d$/.test(value)) {
-                            return '用户名不能全为数字';
-                        }
+
+            });
+
+            //上传文件
+            var uploadInst = upload.render({
+                elem: '#upfile' //绑定元素
+                , url: 'upload.php' //上传接口
+                , done: function (res) {
+                    if (res['code'] == 1) {
+                        //alert(res['src']);
+                        var imgpath = res['src'];
+                        //alert(imgpath);
+                        layer.msg('图片上传成功');
+                        $("#proimg").attr('src', imgpath);
+                        $("#inputimg").val(imgpath);
+                    } else {
+                        layer.msg('图片上传失败');
                     }
 
-                    //我们既支持上述函数式的方式，也支持下述数组的形式
-                    //数组的两个值分别代表：[正则匹配、匹配不符时的提示文字]
-                    , pass: [
-                        /^[\S]{6,12}$/
-                        , '密码必须6到12位，且不能出现空格'
-                    ],
-                    repass: [/^(?![0-9]+$)|(?![a-zA-Z]+$)|[0-9A-Za-z]{6,16}$/, '输入密码小于6位'],
-                    content: function (value) {
-                        var passvalue = $('#fpwd').val()
-                        if (value != passvalue) {
-
-                            return '两次密码不一致'
-                        }
-                    }
-
-                })*/
-
-                /*  $("#spwd").blur(function () {
-                     if ($(this).val() != $('#fpwd').val()) {
-                         $("#pwds").html("两次密码不一致");
-                         $("#spwd").val("").focus();
-                     }
-                 }) */
-                /*  form.verify({
-                      username: [/^(?![0-9]+$)|(?![a-zA-Z]+$)|[0-9A-Za-z]{5,16}$/, '请输入5到30位字符的数字和字母'],
-                      pass: [/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$/, '输入密码小于6位'], 
-                      repass:[/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$/, '输入密码小于6位'],
-                      content: function (value) {
-                          if (value !== $('#spwd').val()) {
-                            console.log(value)
-                            console.log(repassvalue)
-                              return '两次密码不一致'
-                          }
-                      }*/
-            })
-
-            /* 头像上传 */
-
-            let  uploadInst  = upload.render({
-                elem:'#id_upload_img',
-                url:'C:/Users/Administrator/Desktop/b2c/img',
-                size:1024,
-                done:function(res){
-                    return '上传完毕'
-                },
-                error:function(){
-                    return '上传失败'
                 }
             })
-
-        });
-
-
-
+        })
     </script>
 </body>
 
